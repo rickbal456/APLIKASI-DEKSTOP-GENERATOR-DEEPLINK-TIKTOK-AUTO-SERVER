@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TikTok Deeplink GUI</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+<h1>TikTok Deeplink GUI</h1>
+<div class="row">
+  <label>Project Folder:</label>
+  <input id="projectDir" type="text" />
+  <button id="btnBrowse" title="Pilih folder proyek">Browse…</button>
+</div>
+<div class="row cols">
+<div>
+<label>SERVER API</label>
+<input id="apiUrl" type="text" placeholder="https://domain/apitiktokdirect.php" />
+</div>
+<div>
+<label>SCHEDULE (menit)</label>
+<input id="scheduleMin" type="number" value="60" min="1" />
+</div>
+<div class="btns">
+<button id="btnStart">START</button>
+<button id="btnStop" class="warn">STOP</button>
+</div>
+</div>
+</header>
+
+
+<main>
+<section>
+<h2>LINK (masukkan di sini)</h2>
+<textarea id="links" spellcheck="false" placeholder="https://s.shopee.co.id/...\nhttps://s.shopee.co.id/...\n..."></textarea>
+<div class="row">
+<button id="btnSaveLinks">Simpan ke link_tiktok.txt</button>
+</div>
+</section>
+
+
+<section>
+<h2>Link Mobile (yang diperbarui)</h2>
+<textarea id="output" spellcheck="false" readonly></textarea>
+</section>
+</main>
+
+
+<section class="logs">
+<div class="row" style="justify-content: space-between; align-items: center;">
+<h2>LOG AKTIFITAS</h2>
+<button id="btnClearLog" title="Hapus isi log">Clear Log</button>
+</div>
+<pre id="log"></pre>
+</section>
+
+
+<script src="renderer.js"></script>
+</body>
+</html>
